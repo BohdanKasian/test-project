@@ -177,6 +177,8 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
     border-radius: 25px
     background-color: white
     border: 5px solid #00beee
+    &:hover
+      cursor: pointer
     &:active
       background-color: #387199
 
@@ -184,6 +186,10 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
   font-family: $font-Mont-Med
   color: #989898
   font-size: 1rem
+
+.flex-column
+  @include flexbox
+  @include flex-direction(column)
 
 .content-container
   @include flexbox
@@ -316,6 +322,8 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
               text-decoration: underline
               color: #4da1ff
               font-size: 0.8rem
+              &:hover
+                opacity: 0.9
         .vertical-line-news
           width: 69%
           margin: 0 auto
@@ -470,11 +478,8 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
         padding-top: 8%
         span
           font-family: $font-Mont-MedItalic
-
   .main-content
     margin-left: 4%
-    @include flexbox
-    @include flex-direction(column)
     .flex_stretch
       @include flexbox
       @include flex-wrap(wrap)
@@ -485,10 +490,7 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
       font-size: 2rem
       letter-spacing: 0.1rem
     .training-block
-      height: 27%
-      max-height: 666px
       .img-block
-        height: 90%
         margin-top: 4%
         .back_img
           @include flexbox
@@ -502,6 +504,7 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
           box-shadow: inset 0px -256px 95px rgba(85, 110, 125, 0.5)
           cursor: pointer
           position: relative
+          height: 277px
           &:hover
             .button
               display: block
@@ -553,8 +556,6 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
       @include flexbox
       @include flex-direction(column)
       margin-top: 5%
-      height: 44%
-      max-height: 1143px
       .diploma-row
         @include flexbox
         .diploma_box_text
@@ -586,9 +587,6 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
       background: url("../images/form-training-img-back.jpg") no-repeat center
       -o-background-size: cover
       -moz-background-size: cover
-      -webkit-background-size: cover
-      height: 16%
-      max-height: 410px
       @include flexbox
       @include flex-direction(column)
       @include align-items(center)
@@ -596,7 +594,7 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
       margin-top: 2.5%
       .training-form
         width: 84%
-        height: 76%
+        padding: 4% 0
         h3
           font-family: $font-Mont-Med
           color: white
@@ -629,9 +627,10 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
             z-index: 1
             top: 25%
       .form-massage__padding
+        @include flex-grow(1)
         padding-left: 5%
         input
-          padding: 6% 34% 47% 7%
+          padding: 13px 0 43% 18px
           margin: 0
       .form-training_button-box
         @include flexbox
@@ -639,7 +638,6 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
         .button
           padding: 2% 9% 2% 9%
     .advantages-box
-      max-height: 775px
       .adv-box-img
         width: 26.33%
         max-width: 177px
@@ -701,7 +699,7 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
   -webkit-background-size: cover
   font-family: $font-Mont-SemiBold
   color: white
-  .flex-space
+  .flex-justify
     @include flexbox
     @include justify-content(space-between)
     .left-column
@@ -762,6 +760,8 @@ $font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
       font-size: 17px
       color: #4da1ff
       text-decoration: underline
+      &:hover
+        opacity: 0.9
 .right-column
   width: 26%
   .maps-box
