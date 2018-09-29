@@ -1,0 +1,92 @@
+@font-face {
+    font-family: 'Montserrat-Semibold';
+    src: local('☺'),
+    url('Montserrat-Semibold.woff') format('woff'),
+    url('Montserrat-Semibold.woff2') format('woff2'),
+    url('Montserrat-Semibold.eot') format('eot'),
+    url('Montserrat-Semibold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-ExtraBold';
+    src: local('☺'),
+    url('Montserrat-ExtraBold.woff') format('woff'),
+    url('Montserrat-ExtraBold.eot') format('eot'),
+    url('Montserrat-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Regular';
+    src: local('☺'),
+    url('Montserrat-Regular.woff') format('woff'),
+    url('Montserrat-Regular.eot') format('eot'),
+    url('Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: local('☺'),
+    url('Montserrat-Light.woff') format('woff'),
+    url('Montserrat-Light.eot') format('eot'),
+    url('Montserrat-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-Medium';
+    src: local('☺'),
+    url('Montserrat-Medium.woff') format('woff'),
+    url('Montserrat-Medium.eot') format('eot'),
+    url('Montserrat-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-MediumItalic';
+    src: local('☺'),
+    url('Montserrat-MediumItalic.woff') format('woff'),
+    url('Montserrat-MediumItalic.eot') format('eot'),
+    url('Montserrat-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat-SemiBoldItalic';
+    src: local('☺'),
+    url('Montserrat-SemiBoldItalic.woff') format('woff'),
+    url('Montserrat-SemiBoldItalic.eot') format('eot'),
+    url('Montserrat-SemiBoldItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Bold';
+    src: local('☺'),
+    url('Roboto-Bold.woff') format('woff'),
+    url('Roboto-Bold.woff2') format('woff2'),
+    url('Roboto-Bold.eot') format('eot'),
+    url('Roboto-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-Medium';
+    src: local('☺'),
+    url('Roboto-Medium.woff') format('woff'),
+    url('Roboto-Medium.eot') format('eot'),
+    url('Roboto-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto-MediumItalic';
+    src: local('☺'),
+    url('Roboto-MediumItalic.woff') format('woff'),
+    url('Roboto-MediumItalic.eot') format('eot'),
+    url('Roboto-MediumItalic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

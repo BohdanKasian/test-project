@@ -1,0 +1,781 @@
+@import "mixin/_mixinFlexWebkit.scss"
+
+$font-Mont-SemiBold: 'Montserrat-Semibold', sans-serif
+$font-Mont-ExtraBold: 'Montserrat-ExtraBold', sans-serif
+$font-Mont-Light: 'Montserrat-Light', sans-serif
+$font-Mont-Reg: 'Montserrat-Regular', sans-serif
+$font-Mont-Med: 'Montserrat-Medium', sans-serif
+$font-Mont-MedItalic: 'Montserrat-MediumItalic', sans-serif
+$font-Mont-SemiBoldItalic: 'Montserrat-SemiBoldItalic', sans-serif
+$font-Rob-Bold: 'Roboto-Bold', sans-serif
+$font-Rob-Medium: 'Roboto-Medium', sans-serif
+$font-Rob-MedItalic: 'Roboto-MediumItalic', sans-serif
+
+.line
+  @include flexbox
+  height: 12px
+  width: 100%
+  .orange
+    background-color: #f39c11
+    width: 55%
+  .blue
+    width: 45%
+    background-color: #4da1ff
+.wrapper
+  width: 90%
+  max-width: 1140px
+  margin: 0 auto
+  @media screen and (max-width: 1100px)
+    width: 100%
+    padding-right: 5px
+    padding-left: 5px
+    margin: 0 auto
+
+.header
+  @include flexbox
+  padding-top: 4%
+  padding-bottom: 4.3%
+  .title
+    width: 36%
+    h1
+      font-family: $font-Mont-SemiBold
+      color: #696969
+      font-size: 1rem
+      margin: 7% 0 0 6%
+      line-height: 1.3rem
+    .social
+      @include inline-flex
+      @include align-items(baseline)
+      margin-left: 6%
+      margin-top: 1%
+      .social_link
+        margin-right: 19%
+        svg
+          fill: #e4e4e4
+        .soc-vk
+          &:hover
+            fill: #597da3
+        .soc-ok
+          &:hover
+            fill: #ed812b
+        .soc-fb
+          &:hover
+            fill: #3b5998
+  .search
+    margin: 3% 0 0 3%
+    width: 26%
+    p
+      font-family: $font-Mont-Light
+      color: black
+      font-size: 0.8rem
+    div
+      position: relative
+      width: 290px
+      margin: 5% 0 0 1%
+    input
+      background-color: #eff0f4
+      border: none
+      color: #696969
+      font-size: 0.8rem
+      font-family: $font-Mont-Med
+      width: 100%
+      padding: 4% 27% 5% 5%
+      [placeholder]
+        text-overflow: ellipsis
+        width: 150px
+      &::-moz-placeholder
+        text-overflow: ellipsis
+      &:-moz-placeholder
+        text-overflow: ellipsis
+      &:-ms-input-placeholder
+        text-overflow: ellipsis
+    svg
+      position: absolute
+      z-index: 1
+      fill: #00beee
+      right: 0
+      top: 24%
+  .entrance
+    margin-top: 1%
+    width: 22%
+    >a
+      @include flexbox
+      color: #7f7f7f
+      fill: #7f7f7f
+      font-size: 1rem
+      font-family: $font-Mont-Light
+      margin-left: 15%
+      margin-top: 2%
+      line-height: 1.3rem
+      letter-spacing: 0.1em
+      svg
+        margin-right: 2%
+      span
+        font-family: $font-Mont-Reg
+        color: #f39c11
+    div
+      margin-left: 10%
+    .button-login
+      margin-top: 7.8%
+    .button-call
+      margin-top: 13.4%
+      .button
+        background-color: #f39c11
+.button
+  letter-spacing: 0.06em
+  font-family: $font-Mont-SemiBold
+  font-size: 0.8rem
+  text-transform: uppercase
+  color: white
+  background-color: #4da1ff
+  padding: 0.9rem 2rem
+  border-radius: 35px
+  white-space: nowrap
+  &:hover
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.14)
+
+.box-nav
+  background-color: #4da1ff
+  nav
+    @include flexbox
+    @include justify-content(space-between)
+    font-family: $font-Mont-SemiBold
+    text-transform: uppercase
+    padding: 1.5% 0
+    a
+      color: white
+      font-size: 0.9rem
+      &:hover
+        color: #dfdfdf
+
+.back-img
+  background: url("../images/background-header.jpg") no-repeat center top
+  -o-background-size: cover
+  -moz-background-size: cover
+  -webkit-background-size: cover
+  padding-bottom: 1.3%
+  .slider-text
+    h2
+      font-family: $font-Mont-SemiBold
+      font-size: 2rem
+      line-height: 2.8rem
+      color: white
+      padding: 10% 0 5% 0
+    .button
+      padding: 1.2rem 2rem
+      letter-spacing: 0.15rem
+  .main-slider__margin
+    width: 9%
+    margin: 8.5% auto 0 auto
+.slider-circle
+  @include flexbox
+  @include justify-content(space-between)
+  li
+    display: inline-block
+    width: 20px
+    height: 20px
+    border-radius: 25px
+    background-color: white
+    border: 5px solid #00beee
+    &:active
+      background-color: #387199
+
+.font__med__color
+  font-family: $font-Mont-Med
+  color: #989898
+  font-size: 1rem
+
+.content-container
+  @include flexbox
+  padding-top: 2%
+  .left-sidebar
+    width: 32%
+    .menu
+      @include flexbox
+      @include flex-direction(column)
+      @include justify-content(space-between)
+      font-family: $font-Mont-SemiBold
+      font-size: 0.9rem
+      color: #696969
+      height: 21%
+      max-height: 380px
+      width: 99%
+      margin-top: 1%
+      li
+        position: relative
+        line-height: 3rem
+        padding-left: 4%
+        span
+          color: #4da1ff
+        &::after
+          display: inline-block
+          content: ""
+          background-color: white
+          width: 7px
+          height: 7px
+          border-radius: 7px
+          border: 1px solid #4da1ff
+          position: absolute
+          right: 6%
+          top: 49%
+          z-index: -1
+        &:active
+          color: white
+          background-color: #4da1ff
+          span
+            color: white
+            background-color: #4da1ff
+        &:hover
+          color: white
+          background-color: #4da1ff
+          span
+            color: white
+            background-color: #4da1ff
+    .btn-left-side
+      @include flexbox
+      @include flex-direction(column)
+      @include justify-content(center)
+      width: 90%
+      margin: 15% auto 0 auto
+      a
+        margin-bottom: 5%
+        position: relative
+        text-align: center
+        letter-spacing: 0.07rem
+        padding: 1rem 0.1rem
+        font-size: 0.9rem
+      .left_btn-app
+        background-color: #f39c11
+        &:after
+          display: inline-block
+          content: url("../images/graduation-hat.png")
+          position: absolute
+          right: 4%
+          top: 22%
+      .left_btn-pay
+        background-color: #f0434c
+        &:after
+          display: inline-block
+          content: url("../images/credit-cards-payment.svg")
+          position: absolute
+          right: 4%
+          top: 12%
+    .news_box
+      margin-top: 3%
+      .news-speaker
+        display: block
+        width: 37px
+        height: auto
+        margin: 0 auto
+      .notif-box
+        border: 1px solid #d0d7dd
+        margin-top: 8%
+        margin-bottom: 5%
+        position: relative
+        &::before
+          content: ""
+          width: 20px
+          height: 20px
+          border: solid #d0d7dd
+          border-width: 1px 1px 0 0
+          background: white
+          transform: rotate(-45deg)
+          position: absolute
+          left: 46%
+          right: 50%
+          top: -2.3%
+        .notification
+          text-align: center
+          .time-news
+            font-family: $font-Mont-Light
+            @include flexbox
+            @include justify-content(space-between)
+            color: #bababa
+            padding: 0 1%
+            margin-top: 7%
+            &:first-child
+              font-size: 0.8rem
+            p
+              &:last-child
+                font-size: 1rem
+          >img
+            margin-top: 4%
+          .notification-text-box
+            width: 70%
+            margin: 4% auto 9% auto
+            .notif-title
+              font-family: $font-Rob-Medium
+              color: #989898
+              font-size: 1rem
+            .notif-tex
+              font-family: $font-Rob-MedItalic
+              color: #a1a1a1
+              font-size: 0.9rem
+            .more
+              font-family: $font-Rob-Medium
+              text-decoration: underline
+              color: #4da1ff
+              font-size: 0.8rem
+        .vertical-line-news
+          width: 69%
+          margin: 0 auto
+          border: 1px solid #d0d7dd
+    .form-side
+      height: 6%
+      max-height: 225px
+      margin-top: 8%
+      ul
+        @include flexbox
+        @include flex-direction(column)
+        @include justify-content(space-around)
+        height: 92%
+        padding-top: 4%
+        input
+          cursor: pointer
+          display: none
+          &:checked + label
+            .checkbox-style
+              svg
+                display: inline-block
+                position: absolute
+                top: 2px
+                right: 0
+                bottom: 0
+                left: 2px
+          &[type="radio"]
+            display: none
+        label
+          cursor: pointer
+          position: relative
+          padding-left: 11%
+          .checkbox-style
+            display: inline-block
+            width: 22px
+            height: 22px
+            border: 1px solid #a1a1a1
+            border-radius: 5px
+            position: absolute
+            left: 0
+            svg
+              fill: #a6e50f
+              display: none
+    .time-group
+      @include flexbox
+      border: 1px solid #e7ebee
+      border-radius: 5px
+      margin-top: 8%
+      margin-bottom: 7%
+      padding-top: 6%
+      padding-bottom: 5%
+      .timer-text
+        font-size: 1rem
+        padding-left: 4%
+      .timer
+        font-size: 1.1rem
+        padding-left: 4%
+        position: relative
+        bottom: 2px
+        @include flexbox
+        @include align-items(baseline)
+        span
+          font-family: $font-Mont-SemiBold
+          color: #4da1ff
+          border: 1px solid #e7ebee
+          border-radius: 5px
+          padding: 5px
+        .color__orange
+          color: #f39c11
+          padding: 4px 19px 4px 19px
+    .btn-library
+      text-align: center
+      margin: 9% 0
+      .button
+        padding: 1rem 6.8rem
+        letter-spacing: 0.1rem
+        font-size: 0.9rem
+    .drop-down-list
+      font-family: $font-Mont-SemiBold
+      color: #989898
+      font-size: 0.79rem
+      margin-top: 5%
+      .dd-btn
+        background-color: #4da1ff
+        color: white
+        line-height: 3rem
+        padding-left: 4%
+        font-size: 0.99rem
+        position: relative
+        cursor: pointer
+        &::before
+          content: ""
+          width: 6px
+          height: 6px
+          border: solid white
+          border-width: 0 3px 3px 0
+          transform: rotate(-45deg)
+          border-radius: 3px
+          position: absolute
+          right: 6%
+          top: 43%
+      .dd-btn__active
+        background-color: #f39c11
+        transition: all ease 0.2s
+        &::before
+          border-width: 0 0 3px 3px
+          transform: rotate(-45deg)
+      .dd__none
+        display: none
+      .dd__padding
+        padding-left: 12%
+        padding-top: 3%
+      .dd-title
+        color: #4da1ff
+        position: relative
+        font-size: 1rem
+      .dd-text
+        width: 76%
+      .font_ital
+        font-family: $font-Mont-SemiBoldItalic
+      .dd-title.circle
+        &:before
+          display: inline-block
+          content: ""
+          background-color: white
+          width: 8px
+          height: 8px
+          border-radius: 8px
+          border: 1px solid #4da1ff
+          position: absolute
+          left: 4%
+          top: 46%
+      .dd-title.check
+        svg
+          fill: #a6e50f
+          position: absolute
+          left: 4%
+    .material-box
+      margin-top: 16%
+      text-align: center
+      .button
+        letter-spacing: 0.1rem
+        position: relative
+        padding: 1rem 4rem
+        img
+          position: absolute
+          right: 13%
+      p
+        font-family: $font-Mont-Med
+        color: #a1a1a1
+        font-size: 0.8rem
+        padding-top: 8%
+        span
+          font-family: $font-Mont-MedItalic
+
+  .main-content
+    margin-left: 4%
+    @include flexbox
+    @include flex-direction(column)
+    .flex_stretch
+      @include flexbox
+      @include flex-wrap(wrap)
+      @include align-items(stretch)
+    .main-content_title
+      font-family: $font-Mont-SemiBold
+      color: #696969
+      font-size: 2rem
+      letter-spacing: 0.1rem
+    .training-block
+      height: 27%
+      max-height: 666px
+      .img-block
+        height: 90%
+        margin-top: 4%
+        .back_img
+          @include flexbox
+          @include flex-direction(column)
+          @include align-items(center)
+          @include justify-content(flex-end)
+          width: 33.33%
+          color: white
+          font-family: $font-Mont-SemiBold
+          font-size: 1.01rem
+          box-shadow: inset 0px -256px 95px rgba(85, 110, 125, 0.5)
+          cursor: pointer
+          position: relative
+          &:hover
+            .button
+              display: block
+              background-color: #f39c11
+              position: absolute
+              bottom: 6%
+              text-transform: none
+              letter-spacing: 0
+              padding: 10px 58px 10px 58px
+            h3
+              bottom: 22%
+          h3
+            width: 90%
+            position: relative
+            bottom: 9%
+          .button
+            display: none
+        .back_img.one
+          background: url("../images/training-img-1.jpg") no-repeat center
+          -o-background-size: cover
+          -moz-background-size: cover
+          -webkit-background-size: cover
+        .back_img.two
+          background: url("../images/training-img-2.jpg") no-repeat center
+          -o-background-size: cover
+          -moz-background-size: cover
+          -webkit-background-size: cover
+        .back_img.three
+          background: url("../images/training-img-3.jpg") no-repeat center
+          -o-background-size: cover
+          -moz-background-size: cover
+          -webkit-background-size: cover
+        .back_img.four
+          background: url("../images/training-img-4.jpg") no-repeat center
+          -o-background-size: cover
+          -moz-background-size: cover
+          -webkit-background-size: cover
+        .back_img.five
+          background: url("../images/training-img-5.jpg") no-repeat center
+          -o-background-size: cover
+          -moz-background-size: cover
+          -webkit-background-size: cover
+        .back_img.six
+          background: url("../images/training-img-6.jpg") no-repeat center
+          -o-background-size: cover
+          -moz-background-size: cover
+          -webkit-background-size: cover
+    .documents-block
+      @include flexbox
+      @include flex-direction(column)
+      margin-top: 5%
+      height: 44%
+      max-height: 1143px
+      .diploma-row
+        @include flexbox
+        .diploma_box_text
+          @include flexbox
+          @include flex-direction(column)
+          @include justify-content(center)
+          h3
+            font-family: $font-Mont-Med
+            font-size: 1.4rem
+            color: #4da1ff
+          p
+            font-family: $font-Mont-Light
+            font-size: 0.9rem
+            color: #a1a1a1
+      .diploma-row.reverse
+        @include flex-direction(row-reverse)
+        text-align: right
+      .diploma__padding
+        padding: 4% 1% 0 2%
+      .supplement__padding
+        padding: 8% 1%
+        img
+          padding-top: 4%
+      .certification__padding
+        padding: 6% 0 0 2%
+        .diploma_box_text
+          padding-right: 5%
+    .form-background
+      background: url("../images/form-training-img-back.jpg") no-repeat center
+      -o-background-size: cover
+      -moz-background-size: cover
+      -webkit-background-size: cover
+      height: 16%
+      max-height: 410px
+      @include flexbox
+      @include flex-direction(column)
+      @include align-items(center)
+      @include justify-content(center)
+      margin-top: 2.5%
+      .training-form
+        width: 84%
+        height: 76%
+        h3
+          font-family: $font-Mont-Med
+          color: white
+          font-size: 1.5rem
+      .form_input_box
+        @include flexbox
+        padding-top: 3%
+      .form_input
+        @include flexbox
+        @include flex-direction(column)
+        input
+          font-family: $font-Mont-Med
+          color: #989898
+          position: relative
+          font-size: 0.9rem
+          padding: 6% 18% 5% 8%
+          border-radius: 10px
+          margin-bottom: 7%
+        .input-box__relative
+          position: relative
+          svg
+            position: absolute
+            right: 5%
+            fill: #abe61b
+            z-index: 1
+            top: 25%
+          img
+            position: absolute
+            right: 5%
+            z-index: 1
+            top: 25%
+      .form-massage__padding
+        padding-left: 5%
+        input
+          padding: 6% 34% 47% 7%
+          margin: 0
+      .form-training_button-box
+        @include flexbox
+        @include flex-direction(row-reverse)
+        .button
+          padding: 2% 9% 2% 9%
+    .advantages-box
+      max-height: 775px
+      .adv-box-img
+        width: 26.33%
+        max-width: 177px
+        margin: 5% 3% 5% 5%
+        padding-bottom: 3%
+        text-align: center
+        &:hover
+          background: #eff0f4
+          img
+            opacity: 1
+        img
+          opacity: 0.5
+        p
+          color: #777777
+          font-family: $font-Mont-Med
+          font-size: 0.8rem
+          width: 63%
+          margin: 0 auto
+
+.flex_justify
+  @include flexbox
+  @include justify-content(space-between)
+
+.license-content
+  margin-top: 5%
+.license-slider__margin
+  width: 13%
+  margin: 5.5% auto
+
+.back-call
+  text-align: center
+  .back-call_title
+    font-family: $font-Mont-MedItalic
+    color: #323c47
+    font-size: 1.4rem
+    width: 62%
+    margin: 11% auto 0 auto
+  form
+    margin-top: 9%
+    .button
+      font-size: 1rem
+      padding: 2.5% 16% 2.5% 16%
+      border-radius: 10px
+    .back-call_input-box
+      width: 94%
+      margin: 4% auto
+      .back-call_input-text
+        margin: 0 0 0 5%
+        padding: 0 19% 0 2%
+        border-radius: 5px
+      .button
+        padding: 2% 6%
+        margin: 5px 23px 0 0
+
+.footer-BG
+  background: url("../images/footer-bg.png") no-repeat center
+  -o-background-size: cover
+  -moz-background-size: cover
+  -webkit-background-size: cover
+  font-family: $font-Mont-SemiBold
+  color: white
+  .flex-space
+    @include flexbox
+    @include justify-content(space-between)
+    .left-column
+      margin: 4% 0 0 3%
+      width: 30%
+      .footer-list_column.left
+        margin-top: 15%
+        .footer-left_link
+          font-size: 13px
+          position: relative
+          color: white
+          margin-bottom: 12%
+          &::before
+            display: inline-block
+            content: ""
+            width: 7px
+            height: 7px
+            border-radius: 7px
+            border: 1px solid #4da1ff
+            position: absolute
+            left: -16%
+            top: 49%
+          &:hover
+            color: #4da1ff
+            &::before
+              border-color: #95cb13
+  .footer-list_column
+    @include flexbox
+    @include flex-direction(column)
+    @include justify-content(space-between)
+    .footer-right_link
+      font-size: 13px
+      position: relative
+      color: white
+      &::after
+        display: inline-block
+        content: ""
+        width: 7px
+        height: 7px
+        border-radius: 7px
+        border: 1px solid #4da1ff
+        position: absolute
+        right: 0
+        top: 49%
+      &:hover
+        color: #4da1ff
+        &::after
+          border-color: #95cb13
+  .column-center
+    font-size: 12px
+    margin: 6% 3% 0 2%
+    width: 45%
+    .footer-title
+      margin-bottom: 4%
+    a
+      margin-bottom: 6%
+      width: 80%
+      font-size: 17px
+      color: #4da1ff
+      text-decoration: underline
+.right-column
+  width: 26%
+  .maps-box
+    @include flexbox
+    @include align-items(center)
+    margin-top: 30%
+    .rc-text
+      margin-left: 10%
+      line-height: 1.5rem
+      font-size: 13px
+      a
+        color: white
+  .footer-list_column.right
+    margin-top: 33%
+    a
+      margin-bottom: 14%
+      padding-left: 14%
